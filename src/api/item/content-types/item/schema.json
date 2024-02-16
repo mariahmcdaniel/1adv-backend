@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Price": {
+      "type": "decimal",
+      "required": true
+    },
+    "InAuction": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "MinBid": {
+      "type": "decimal",
+      "default": 5
+    },
+    "DateAdded": {
+      "type": "date",
+      "required": true
+    },
+    "PrimaryImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "AdditionalImages": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
